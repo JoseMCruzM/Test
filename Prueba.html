@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A mi amada</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-image: url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm00MjgtMDAwOS5qcGc.jpg');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+            font-family: Arial, sans-serif;
+            transition: background-image 0.5s ease-in-out;
+        }
+        .poem-container {
+            background-color: transparent;
+            padding: 20px;
+            text-align: center;
+        }
+        .letter-image {
+            margin-bottom: 15px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .button::before,
+        .button::after {
+            content: "\2665";
+            margin: 0 5px;
+        }
+        .poem {
+            display: none;
+            background-color: transparent;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .close-button {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="poem-container">
+        <div id="letter" style="text-align: center;">
+            <img class="letter-image" src="https://img.freepik.com/free-photo/top-view-love-letters-arrangement_23-2150716537.jpg?t=st=1724197782~exp=1724201382~hmac=1c2b5074a319aff624412122f3b3ef23a48fe4a20e2b2496dc3a16a663329d7d&w=996" alt="Letter Image"><br>
+            <button class="button" onclick="openLetter()">Open Letter</button>
+        </div>
+        <div class="poem">
+            Amar es este tímido silencio<br>
+            cerca de ti, sin que lo sepas,<br>
+            y recordar tu voz cuando te marchas<br>
+            y sentir el calor de tu saludo.<br>
+            Amar es aguardarte<br>
+            como si fueras parte del ocaso,<br>
+            ni antes ni después, para que estemos solos<br>
+            entre los juegos y los cuentos<br>
+            sobre la tierra seca.<br>
+            Amar es percibir, cuando te ausentas,<br>
+            tu perfume en el aire que respiro,<br>
+            y contemplar la estrella en que te alejas<br>
+            cuando cierro la puerta de la noche.<br><br>
+            Amor, de Salvador Novo<br><br>
+            Te amo mi reina, que cumplas muchos años más.<br><br>
+            Con amor, JM
+            <button class="button close-button" onclick="closeLetter()">Close Letter</button>
+        </div>
+    </div>
+
+    <script>
+        function openLetter() {
+            var letter = document.getElementById('letter');
+            var poem = document.querySelector('.poem');
+            letter.style.display = 'none';
+            poem.style.display = 'block';
+            document.body.style.backgroundImage = "url('https://www.stanroseimages.com/images/large/DIAflowers-k2.jpg')";
+        }
+        function closeLetter() {
+            var letter = document.getElementById('letter');
+            var poem = document.querySelector('.poem');
+            letter.style.display = 'block';
+            poem.style.display = 'none';
+            document.body.style.backgroundImage = "url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm00MjgtMDAwOS5qcGc.jpg')";
+        }
+    </script>
+</body>
+</html>
